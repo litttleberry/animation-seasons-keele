@@ -1,0 +1,167 @@
+*Ladies of the seasons
+
+Animation created by CSC-10026 student #21029058.
+
+*Fulfillment of the coursework requirement
+
+?Keele theme
+Ladies of the Seasons as they are pictured on Chancellors building
+Background image of Keele Hall
+Images of squirrels
+Colours from the Keele Crest
+
+?Interaction
+An interactive sketch with instructions on how to use it
+
+?Note
+Credits can be paused by moving the mouse upwards, and playing is resumed upon
+clicking the right-hand bottom corner. Textfile of credits is stored in the data folder.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+*Media
+
+?Images of the Ladies of the Seasons
+Original tile art can be found on the wall just outside the main entrance
+to Chancellor's building. Artist unknown. Photographs taken on mobile 
+phone, by yours truly. Cropped and resized using GIMP and Processing.
+
+?Images of squirrel
+Photohraph taken by user pcharnyphoto on Pixabay. Public Domain. 
+Cropped and resized using GIMP, flipped using Processing.
+
+?Background image
+Image of Keele Hall by student #21029058.
+Resized and oil canvas filter added using GIMP.
+
+?Images of birds
+Photographs taken by users analogicus, 3493568, and mabel amber on Pixabay.
+Public Domain. Cropped, resized, backgrounds made transparent using GIMP.
+
+Each image is its own .png image file, which is accessed using PImage class.
+
+Image files: spring, summer, autumn, winter, squirrel, bg, bird0, bird1, bird2
+
+?Text files
+User information, springtime fortunes, summertime weather forecasts and credits 
+are accessed from text files. Different fonts are used for headings and plaintext.
+Text files stored in .txt format, printed on screen using reader/parse or string loader.
+
+Text files: info, fortunes, forecasts, cred
+
+?Fonts used
+Plaintext: Roboto
+Credit headers: The Beautiful Night by Attract Studio
+Credit subheaders: Cafe Matcha by Subectype & Orenari
+Header fonts downloaded from DaFont, for personal use only.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+*Sound
+
+?Background music
+Sedative by Lesfm on Pixabay. Public Domain. 
+
+Background music compressed and cut using Audacity. Same music plays on the 
+background in all scenes without interruption or overlap, and loops as seamlessly as possible.
+
+Sound files: chill.mp3
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+*Animation
+
+A sketch in six scenes. Each scene has a different function related to the season.
+
+?Introduction and welcome page
+Setting up the outline of the sketch. Display size, loading of files, introduction 
+of global variables, placing season buttons at the bottom of the sketch, parsing 
+and displaying user manual, methods that are accessed from multiple scenes. 
+Such methods include the recursive, fractal cherry tree, the background canvas 
+for text, and tracking mouse movement and clicks for moving between scenes.
+
+?Spring
+Lady Spring blesses the user with a random good fortune from a text file. 
+Canvas size and its location on screen is determined. Fractal cherry tree 
+is in blossom with random red and white flowers, and all the shades in between.
+
+?Summer
+Lady Summer showers the user with a random, humorous weather forecast from a 
+text file. Canvas size and location on screen is determined. Fractal cherry 
+tree is in full foliage with random shades of green.
+
+?Autumn
+Lady Autumn sees the birds fly away as winter draws nearer, with the cherry tree
+rustling in the cold wind. Fractal cherry tree is in autumn foliage with fewer leaves 
+than in summertime. Shades of the leaves vary between random  yellows, oranges, 
+and browns. Birds seem to fly further away from the viewer until they disappear 
+altogether. Tree continues to sway in the wind with branches and foliage moving around.
+
+?Winter
+Lady Winter tells the current time of the system. Time is displayed on a binary clock 
+and in plain text for those who don't quite master reading the binary clock yet. 
+Fractal cherry tree is bare, which emphasises the random angles and use of bezier 
+curves. Wind moves the tree, albeit at a slightly calmer pace than in autumn.
+
+?Credits
+Rolling credits start from the bottom of the screen and progress upwards. Animation 
+of the credits can be stopped by moving the mouse, and continued by clicking the
+right-hand bottom corner again. Different fonts are used for clarity and visual effect.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+*Programming
+
+?Cherry tree
+To avoid repetition as the cherry tree is shown in all seasons, the function is 
+written once and called for with parametres from all seasons. Tree consists of two
+functions: tree(String) and branch(float, string), and is found on the first tab.
+
+Aspects used include fractals, recursion, simple maths, PushMatrix and PopMatrix, 
+bezier curves, transforms (translate, rotate), graphical 2d primitive shapes 
+(different weight strokes for trunk and branches, ellipses for leaves and blossoms).
+
+When the tree trunk is first divided into two, the angle is changed to leaning more 
+to the left using rotate. Rotate is also used on each branch in combination with 
+random to create a more natural looking tree. Bezier curves are used in different 
+amounts on left and right facing branches to give the tree even more randomness.
+
+?Canvas for text
+Canvas method is called from spring(), summer(), and winter(). Parametres include 
+the location and size of the textbox, as well as a premeditated border colour in Keele 
+theme. Textbox is always white. All colours are stored in an array. Rounded corners.
+
+?Flying birds
+Quite simple distancing from a selected point on the screen using an if-statement.
+
+?Tracking movement
+MouseClicked(), redraw(), loop(), noLoop(). Sketch is controlled by mouse clicks.
+
+?Images
+Individual image files in .png; PImage, loadImage(), 
+flipping of imagery using rotate and Push/PopMatrix.
+
+?Text
+Individual text files in .txt; String[] for accessing individual lines in the files, 
+loadStrings(), BufferedReader and createReader() for parsing a longer text (info.txt) 
+onto screen; text(), textSize(), textAlign(), PFont, createFont(), textFont()
+
+?Binary clock
+Primitives, arrays, for-loops, if-statements. 2d primitive shapes in the form of a circle 
+in two colours and no outline for showing the time, Keele colours for telling the time.
+
+Function to get the time uses ternary operators and is heavily influenced by V. Lukashevics, 
+https://github.com/vlukashevich/binary-clock-processing/blob/master/binary_clock.pde 
+(last accessed 1.5.2022).
+
+Time in plain text added for extra clarity and learning purposes.
+
+?Libraries
+The sketch uses processing.sound
+
+- - - - - - - - - - - - - - 
+
+Thank you for interacting! Press esc to exit the sketch.
+
+May 2022, Keele University
